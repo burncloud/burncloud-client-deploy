@@ -2,9 +2,9 @@ use dioxus::prelude::*;
 
 #[component]
 pub fn DeployConfig() -> Element {
-    let mut selected_model = use_signal(|| "Qwen2.5-7B-Chat".to_string());
-    let mut port = use_signal(|| "8001".to_string());
-    let mut bind_address = use_signal(|| "127.0.0.1".to_string());
+    let selected_model = use_signal(|| "Qwen2.5-7B-Chat".to_string());
+    let port = use_signal(|| "8001".to_string());
+    let bind_address = use_signal(|| "127.0.0.1".to_string());
 
     rsx! {
         div { class: "page-header",
